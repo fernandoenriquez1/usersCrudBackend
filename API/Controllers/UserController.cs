@@ -1,4 +1,5 @@
 ﻿using Application.Features.User.Commands.Create;
+using Application.Features.User.Commands.Delete;
 using Application.Features.User.Commands.Update;
 using Application.Features.User.Queries.GetAll;
 using Application.Features.User.Queries.GetById;
@@ -61,6 +62,16 @@ namespace API.Controllers
         {
             command.UserId = id;
             var response = await mediator.Send(command);
+            return Ok(response);
+        }
+
+        [HttpDelete("{id}", Name = "DeleteUser")]
+        [ProducesResponseType(typeof(DeleteResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var response = await mediator.Send(new DeleteCommand(id));
             return Ok(response);
         }
     }
