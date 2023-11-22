@@ -19,6 +19,7 @@ namespace Infrastructure
             services.AddDbContext<UserCrudDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("ConnectionString")));
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }
