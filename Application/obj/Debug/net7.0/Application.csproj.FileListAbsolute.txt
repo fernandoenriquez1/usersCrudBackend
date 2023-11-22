@@ -10,3 +10,6 @@ C:\projects\reactjs\usersCrudBackend\Application\obj\Debug\net7.0\Application.dl
 C:\projects\reactjs\usersCrudBackend\Application\obj\Debug\net7.0\refint\Application.dll
 C:\projects\reactjs\usersCrudBackend\Application\obj\Debug\net7.0\Application.pdb
 C:\projects\reactjs\usersCrudBackend\Application\obj\Debug\net7.0\ref\Application.dll
+C:\projects\reactjs\usersCrudBackend\Application\bin\Debug\net7.0\Domain.dll
+C:\projects\reactjs\usersCrudBackend\Application\bin\Debug\net7.0\Domain.pdb
+C:\projects\reactjs\usersCrudBackend\Application\obj\Debug\net7.0\Application.csproj.CopyComplete

@@ -26,7 +26,7 @@ namespace Infrastructure.Persistence
                 },
                 new User
                 {
-                    UserId = 1,
+                    UserId = 2,
                     Name = "Joel",
                     PaternalSurname =  "Ramirez",
                     MaternalSurname = "Torres",
@@ -37,7 +37,7 @@ namespace Infrastructure.Persistence
                 },
                 new User
                 {
-                    UserId = 1,
+                    UserId = 3,
                     Name = "Ximena",
                     PaternalSurname =  "Rios",
                     MaternalSurname = "Perez",
