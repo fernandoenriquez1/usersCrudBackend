@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Features\User\Commands\Delete\" />
-    <Folder Include="Features\User\Commands\Update\" />
   </ItemGroup>
 
 </Project>

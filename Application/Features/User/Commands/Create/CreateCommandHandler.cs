@@ -24,6 +24,14 @@ namespace Application.Features.User.Commands.Create
 
         public async Task<CreateResponse> Handle(CreateCommand request, CancellationToken cancellationToken)
         {
+            //validar que no exista un usuario con el mismo correo
+            var userFindByEmail = await userRepository.GetFirstOrDefaultAsync(x => x.Email == request.Email);
+
+            if (userFindByEmail != null)
+            {
+                throw new ApplicationException("Ya existe un usuario con el mismo correo");
+            }
+
             var user = mapper.Map<Domain.User>(request);
             try
             {

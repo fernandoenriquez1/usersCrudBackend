@@ -1,4 +1,5 @@
 ﻿using Application.Features.User.Commands.Create;
+using Application.Features.User.Commands.Update;
 using Application.Features.User.Queries.GetAll;
 using Application.Features.User.Queries.GetById;
 using MediatR;
@@ -48,6 +49,17 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Create([FromBody] CreateCommand command)
         {
+            var response = await mediator.Send(command);
+            return Ok(response);
+        }
+
+        [HttpPut("{id}", Name = "UpdateUser")]
+        [ProducesResponseType(typeof(UpdateResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateCommand command)
+        {
+            command.UserId = id;
             var response = await mediator.Send(command);
             return Ok(response);
         }
