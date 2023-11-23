@@ -31,11 +31,13 @@ Construir los Servicios con Docker Compose:
 Ejecuta el siguiente comando para construir los servicios definidos en tu archivo docker-compose.yml.
 
 docker-compose build
+
 Iniciar los Servicios:
 
 Una vez construidos, inicia los servicios con el siguiente comando.
 
 docker-compose up
+
 Este comando iniciará todos los servicios, incluyendo tu aplicación y la base de datos SQL Server.
 Verificar el Estado de los Servicios:
 
