@@ -25,20 +25,16 @@ Abre una terminal o línea de comandos.
 Navegar al Directorio del Proyecto:
 
 Utiliza el comando cd para navegar al directorio raíz de tu proyecto.
-bash
-Copy code
 cd ruta/a/tu/proyecto
 Construir los Servicios con Docker Compose:
 
 Ejecuta el siguiente comando para construir los servicios definidos en tu archivo docker-compose.yml.
-bash
-Copy code
+
 docker-compose build
 Iniciar los Servicios:
 
 Una vez construidos, inicia los servicios con el siguiente comando.
-bash
-Copy code
+
 docker-compose up
 Este comando iniciará todos los servicios, incluyendo tu aplicación y la base de datos SQL Server.
 Verificar el Estado de los Servicios:
