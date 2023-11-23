@@ -9,7 +9,7 @@ services:
             context: .
             dockerfile: API/Dockerfile
         ports:
-            - "6000:80"
+            - "6003:80"
     server_db:
         image: mcr.microsoft.com/mssql/server:2019-latest
         restart: always

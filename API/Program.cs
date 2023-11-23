@@ -1,5 +1,7 @@
 using Application;
 using Infrastructure;
+using Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +42,13 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.UseCors("UserCrudWebPolicy");
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var dbContext = services.GetRequiredService<UserCrudDbContext>();
+    dbContext.Database.Migrate();
+}
 
 app.MapControllers();
 
